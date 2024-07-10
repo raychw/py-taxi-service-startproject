@@ -4,8 +4,8 @@ from django.conf import settings
 
 
 class Manufacturer(models.Model):
-    name: models.CharField(max_length=256, unique=True)
-    country: models.CharField(max_length=256)
+    name = models.CharField(max_length=256, unique=True)
+    country = models.CharField(max_length=256)
 
 
 class Driver(AbstractUser):

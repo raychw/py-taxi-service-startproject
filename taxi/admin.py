@@ -9,7 +9,7 @@ admin.site.register(Manufacturer)
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
     search_fields = ("model", )
-    list_filter = ("manufacturer__country",)
+    list_filter = ("manufacturer",)
 
 
 @admin.register(Driver)
