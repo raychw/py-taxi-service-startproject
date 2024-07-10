@@ -7,6 +7,9 @@ class Manufacturer(models.Model):
     name = models.CharField(max_length=256, unique=True)
     country = models.CharField(max_length=256)
 
+    def __str__(self):
+        return f"{self.name} ({self.country})"
+
 
 class Driver(AbstractUser):
     license_number = models.CharField(max_length=256, unique=True)
